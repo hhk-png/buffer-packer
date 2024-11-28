@@ -1,0 +1,40 @@
+{
+  "name": "buffer-packer",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@9.6.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "build": "rollup -c",
+    "prepare": "simple-git-hooks",
+    "cover": "vitest run --coverage",
+    "lint": "eslint . --fix",
+    "tsc": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.19.2",
+    "@rollup/plugin-commonjs": "^25.0.8",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@vitest/coverage-v8": "^2.1.6",
+    "eslint": "^9.4.0",
+    "lint-staged": "^15.2.5",
+    "rollup": "^4.18.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "simple-git-hooks": "^2.11.1",
+    "vitest": "^2.1.6"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint . --fix"
+  }
+}
