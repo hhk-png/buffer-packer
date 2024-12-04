@@ -1,6 +1,6 @@
 export default class Packer {
   private format: string;
-  public size: number;
+  private size: number;
   private endian: string;
   private ops: Record<string, any>;
 
@@ -55,6 +55,10 @@ export default class Packer {
       }
       format = format.substring(1);
     }
+  }
+
+  calcsize() {
+    return this.size;
   }
 
   unpack(buffer: ArrayBuffer): any[] {

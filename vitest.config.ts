@@ -10,6 +10,7 @@ export default defineConfig({
       exclude: ['ui', ...coverageConfigDefaults.exclude],
     },
     include: ['./test/*.test.ts'],
+    slowTestThreshold: 0
   },
 })
 
